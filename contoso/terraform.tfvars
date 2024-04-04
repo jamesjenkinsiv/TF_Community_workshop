@@ -1,14 +1,10 @@
+# contoso/terraform.tfvars
 rg_names = [
     "research_dev_rg",
     "research_staging_rg",
     "research_prod_rg"
 ]
 
-tags = {  
-    cost_center = "jjcontoso research"    
-}
-
-# terraform.tfvars
 vnets = [
     {
         name = "dev_vnet"

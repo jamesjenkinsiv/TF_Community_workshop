@@ -1,7 +1,8 @@
-# outputs.tf
-output "rg_ids" {    
-    # splatting expression
-    value = azurerm_resource_group.rgs.*.id   
-    # or for expression
-    # value = [for rg in azurerm_resource_group.rgs : rg.id]     
+# contoso/outputs.tf
+output "resource_groups" {    
+    value = module.connectedrg.rg_ids
+}
+
+output "vnets" {    
+    value = module.connectedrg.vnet_ids
 }
